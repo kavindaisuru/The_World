@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* gallery name start */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(44, 44, 46);
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+
+.gallery .heading{
+  width: 50%;
+  padding-bottom: 50px;
+}
+.gallery .heading h3{
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(224, 17, 17);
+}
+
+.gallery .heading h3 span{
+  font-weight: 100;
+  color: aliceblue;
+  
+}
+/* gallery name end */
+
+
+
+
+/* gallery view */
+.container-1{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+.container-1 .box{
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 15px;
+  overflow: hidden;
+}
+.container-1 .box .imgbox,
+.container-1 .box .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container-1 .box .imgbox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-1 .box .text::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(44, 44, 44);
+  transform: scaleY(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+.container-1 .box:hover .text::before{
+  transform: scaleY(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+.container-1 .box .text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+.container-1 .box .text .content-1{
+  position: relative;
+  padding: 30px;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translate(-300px);
+}
+.container-1 .box:hover .text .content-1{
+  transform: translate(0px);
+
+}
+.container-1 .box:hover .text .content-1 h2{
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.container-1 .box:hover .text .content-1 p{
+  font-size: 1em;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+.gallerytext{
+	color: rgb(212, 189, 95);
+	font-size: 40px;
+	text-align: center;
+	padding: 70px;
+}
+.btn a{
+  text-decoration: none;
+}

@@ -1,0 +1,105 @@
+/* gallery view for home page */
+body{
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(44, 44, 46);
+  }
+.container-1{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* flex-wrap: wrap; */
+	/* max-width: 1500px; */
+  }
+  .container-1 .box{
+	position: relative;
+	width: 320px;
+	height: 320px;
+	margin: 15px;
+	overflow: hidden;
+  }
+  .container-1 .box .imgbox,
+  .container-1 .box .text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  .container-1 .box .imgbox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  .container-1 .box .text::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(44, 44, 44);
+	transform: scaleY(0);
+	transition: transform 0.5s ease-in-out;
+	transform-origin: left;
+  }
+  .container-1 .box:hover .text::before{
+	transform: scaleY(1);
+	transition: transform 0.5s ease-in-out;
+	transform-origin: left;
+  }
+  .container-1 .box .text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: aliceblue;
+  }
+  .container-1 .box .text .content-1{
+	position: relative;
+	padding: 30px;
+	z-index: 1;
+	transition: 0.5s;
+	transform: translate(-300px);
+  }
+  .container-1 .box:hover .text .content-1{
+	transform: translate(0px);
+  
+  }
+  .container-1 .box:hover .text .content-1 h2{
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+  }
+  .container-1 .box:hover .text .content-1 p{
+	font-size: 50px;
+	line-height: normal;
+	
+	font-weight: 300;
+  }
+  .container-1 .box:hover .text .content-1 p{
+	color: rgb(0, 0, 3);
+  }
+  .travel p{
+	  text-align: center;
+	  font-size: 50px;
+	  font-family: cursive;	  
+	  font-style: oblique;  
+	  color: rgb(204, 204, 204);
+	}
+.link { 
+	color: #ffffff;  /* CSS link color*/
+	
+}
+.link:hover { 
+	color: #ff0000; /* CSS link hover*/
+	
+} 
+.more{
+	font-size: 30px;
+	text-align: right;
+}
